@@ -2,14 +2,3 @@
 /blog-app/node_modules
 /blog-app-backend/node_modules
 
-# Other common ignore patterns
-.DS_Store
-.env
-dist/
-build/
-coverage/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
