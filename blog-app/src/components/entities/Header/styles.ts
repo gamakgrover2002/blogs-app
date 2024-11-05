@@ -1,5 +1,5 @@
 export const styles = {
-    wrapper:{
-
-    }
-}
+  wrapper: {
+    width: "100%",
+  },
+};

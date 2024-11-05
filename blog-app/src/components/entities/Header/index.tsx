@@ -1,12 +1,12 @@
-import { Image } from "@models";
+import { ImageType } from "@models";
 import { Box } from "@mui/material";
 import React from "react";
 
 import { styles } from "./styles";
 
 export type HeaderProps = {
-  logo: Image;
+  logo: ImageType;
 };
 export function Header() {
-  return <Box sx={styles.wrapper}></Box>;
+  return <Box sx={styles.wrapper}>LOGO</Box>;
 }

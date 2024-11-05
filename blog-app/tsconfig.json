@@ -25,7 +25,8 @@
       "@providers": ["./src/providers"],
       "@config": ["./src/config"],
       "@models": ["./src/models"],
-      "@libs/*": ["./src/libs/*"]
+      "@libs/*": ["./src/libs/*"],
+      "public": ["./public"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
