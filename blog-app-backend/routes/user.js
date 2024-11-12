@@ -2,7 +2,7 @@ import express from "express";
 const router = express.Router();
 import User from "../schema/User.js";
 
-router.get("/register", (req, res) => {
+router.post("/register", (req, res) => {
   const newUser = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -10,8 +10,12 @@ router.get("/register", (req, res) => {
     password: req.body.password,
   };
   const user = new User(newUser);
-  user.save();
-  res.send("User registered successfully");
+  user
+    .save()
+    .then(() => res.send("User registered successfully"))
+    .catch((error) =>
+      res.status(500).send("Error registering user: " + error.message)
+    );
 });
 
 export default router;
