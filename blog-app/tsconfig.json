@@ -26,7 +26,8 @@
       "@config": ["./src/config"],
       "@models": ["./src/models"],
       "@libs/*": ["./src/libs/*"],
-      "@entities": ["./src/entities"]
+      "@entities": ["./src/entities"],
+      "@public/*": ["./public/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
