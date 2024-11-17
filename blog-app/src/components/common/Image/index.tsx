@@ -1,7 +1,15 @@
-import React from "react";
+import { ImageType } from "@models";
+import { Box } from "@mui/material";
 
-function Image() {
-  return <div></div>;
+type ImageProps = {
+  image: ImageType;
+};
+function Image({ image }: ImageProps) {
+  return (
+    <Box>
+      <Image alt={image.alt} src={image.src} />
+    </Box>
+  );
 }
 
 export default Image;
