@@ -3,7 +3,6 @@ export const styles = {
     width: "100%",
     display: "flex",
     justifyContent: "space-between",
-    padding: "5px 10px",
   },
   menu: {
     display: "flex",
