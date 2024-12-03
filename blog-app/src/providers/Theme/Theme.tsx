@@ -5,16 +5,15 @@ const darkTheme = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      main: "#ffffff",
+      main: "#123456",
     },
   },
 });
 
-function Theme({
+export function Theme({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return <ThemeProvider theme={darkTheme}>{children}</ThemeProvider>;
 }
-export default Theme;
