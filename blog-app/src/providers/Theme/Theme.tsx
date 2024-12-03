@@ -9,7 +9,9 @@ const darkTheme = createTheme({
       },
       styleOverrides: {
         root: {
-          fontSize: "0.1rem",
+          fontSize: "1rem",
+          width: "100px",
+          height: "40px",
         },
       },
     },

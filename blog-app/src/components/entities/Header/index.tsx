@@ -1,6 +1,8 @@
-import { ImageComponent } from "@components/common";
+"use client";
+import { ImageComponent, SideMenu } from "@components/common";
 import { ImageType } from "@models";
 import { Box, Button } from "@mui/material";
+import Link from "next/link";
 
 import { styles } from "./styles";
 
@@ -15,16 +17,18 @@ export function Header() {
   return (
     <Box sx={styles.wrapper}>
       <Box>
+        <SideMenu />
         <ImageComponent image={headerLogo}></ImageComponent>
       </Box>
       <Box sx={styles.menu}>
-        <p>Home</p>
-        <p>Blogs</p>
-        <p>Contact</p>
+        <Link href="/">Home</Link>
+        <Link href="/blogs">Blogs</Link>
+        <Link href="faq">FAQ</Link>
+        <Link href="/contact">Contact</Link>
       </Box>
       <Box sx={styles.buttons}>
-        <Button variant="contained">Log in</Button>
-        <Button>Sign up</Button>
+        <Button>Log in</Button>
+        <Button variant="contained">Sign up</Button>
       </Box>
     </Box>
   );

@@ -2,6 +2,7 @@ export const styles = {
   wrapper: {
     width: "100%",
     display: "flex",
+    padding: "20px",
     justifyContent: "space-between",
   },
   menu: {

@@ -1,5 +1,5 @@
 import { ImageComponent } from "./ImageComponent";
 import { LabelBox } from "./LabelBox";
-import { SideDrawer } from "./SideDrawer";
+import { SideMenu } from "./SideMenu";
 
-export { ImageComponent, LabelBox, SideDrawer };
+export { ImageComponent, LabelBox, SideMenu };
