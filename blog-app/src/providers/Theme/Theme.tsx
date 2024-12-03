@@ -2,10 +2,22 @@
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 const darkTheme = createTheme({
+  components: {
+    MuiButton: {
+      defaultProps: {
+        disableRipple: false,
+      },
+      styleOverrides: {
+        root: {
+          fontSize: "0.1rem",
+        },
+      },
+    },
+  },
   palette: {
     mode: "dark",
     primary: {
-      main: "#123456",
+      main: "#d5bbfa",
     },
   },
 });
