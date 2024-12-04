@@ -25,13 +25,28 @@ export function Header() {
         <SideMenu hidden={dimension.width > 900} />
         <ImageComponent image={headerLogo}></ImageComponent>
       </Box>
-      <Box sx={styles.menu}>
+      <Box
+        sx={
+          (styles.menu,
+          {
+            display: dimension.width < 900 ? "none" : "flex",
+          })
+        }
+      >
         <Link href="/">Home</Link>
         <Link href="/blogs">Blogs</Link>
         <Link href="faq">FAQ</Link>
         <Link href="/contact">Contact</Link>
       </Box>
-      <Box sx={styles.buttons}>
+      <Box
+        sx={
+          (styles.buttons,
+          {
+            display: dimension.width < 900 ? "none" : "flex",
+            gap: "50px",
+          })
+        }
+      >
         <Button>Log in</Button>
         <Button variant="contained">Sign up</Button>
       </Box>

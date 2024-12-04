@@ -6,7 +6,6 @@ export const styles = {
     justifyContent: "space-between",
   },
   menu: {
-    display: "flex",
     gap: "50px",
   },
   buttons: {
