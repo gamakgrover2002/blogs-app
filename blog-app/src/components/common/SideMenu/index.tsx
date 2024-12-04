@@ -1,5 +1,6 @@
 /* eslint-disable import/order */
 import * as React from "react";
+import MenuIcon from "@mui/icons-material/Menu";
 import Button from "@mui/material/Button";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 import Grow from "@mui/material/Grow";
@@ -8,6 +9,7 @@ import Popper from "@mui/material/Popper";
 import MenuItem from "@mui/material/MenuItem";
 import MenuList from "@mui/material/MenuList";
 import Stack from "@mui/material/Stack";
+import { styles } from "./styles";
 
 export type SideMenyProps = {
   hidden?: boolean;
@@ -53,9 +55,12 @@ export function SideMenu({ hidden = true }) {
     <Stack
       direction="row"
       spacing={2}
-      sx={{
-        display: hidden ? "none" : "block",
-      }}
+      sx={
+        (styles.iconWrapper,
+        {
+          display: hidden ? "none" : "block",
+        })
+      }
     >
       <div>
         <Button
@@ -66,7 +71,7 @@ export function SideMenu({ hidden = true }) {
           aria-haspopup="true"
           onClick={handleToggle}
         >
-          Dashboard
+          <MenuIcon />
         </Button>
         <Popper
           open={open}

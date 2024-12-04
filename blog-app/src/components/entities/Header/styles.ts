@@ -3,6 +3,7 @@ export const styles = {
     width: "100%",
     display: "flex",
     padding: "20px",
+    position: "sticky",
     justifyContent: "space-between",
   },
 
