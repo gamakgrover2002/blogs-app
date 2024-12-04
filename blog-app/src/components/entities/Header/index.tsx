@@ -1,5 +1,6 @@
 "use client";
 import { ImageComponent, SideMenu } from "@components/common";
+import { useWindow } from "@hooks";
 import { ImageType } from "@models";
 import { Box, Button } from "@mui/material";
 import Link from "next/link";
@@ -14,10 +15,14 @@ const headerLogo: ImageType = {
 };
 
 export function Header() {
+  const { dimension } = useWindow({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
   return (
     <Box sx={styles.wrapper}>
       <Box>
-        <SideMenu />
+        <SideMenu hidden={dimension.width > 900} />
         <ImageComponent image={headerLogo}></ImageComponent>
       </Box>
       <Box sx={styles.menu}>
