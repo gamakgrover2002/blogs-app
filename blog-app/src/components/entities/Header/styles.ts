@@ -5,9 +5,7 @@ export const styles = {
     padding: "20px",
     justifyContent: "space-between",
   },
-  menu: {
-    gap: "50px",
-  },
+
   buttons: {
     display: "flex",
     gap: "50px",

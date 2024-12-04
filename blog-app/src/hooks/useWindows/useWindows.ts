@@ -10,12 +10,23 @@ export function useWindow(inputDimension: useWindowProps) {
     width: inputDimension.width,
     height: inputDimension.height,
   });
+
   useEffect(() => {
-    const dimen = {
-      width: window.innerWidth,
-      height: window.innerHeight,
+    const updateDimensions = () => {
+      setDimension({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
     };
-    setDimension(dimen);
-  });
+
+    updateDimensions();
+
+    window.addEventListener("resize", updateDimensions);
+
+    return () => {
+      window.removeEventListener("resize", updateDimensions);
+    };
+  }, []);
+
   return { dimension };
 }

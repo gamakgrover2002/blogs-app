@@ -22,16 +22,14 @@ export function Header() {
   return (
     <Box sx={styles.wrapper}>
       <Box>
-        <SideMenu hidden={dimension.width > 900} />
         <ImageComponent image={headerLogo}></ImageComponent>
       </Box>
+      <SideMenu hidden={dimension.width > 900} />
       <Box
-        sx={
-          (styles.menu,
-          {
-            display: dimension.width < 900 ? "none" : "flex",
-          })
-        }
+        sx={{
+          display: dimension.width < 900 ? "none" : "flex",
+          gap: "50px",
+        }}
       >
         <Link href="/">Home</Link>
         <Link href="/blogs">Blogs</Link>
@@ -43,7 +41,6 @@ export function Header() {
           (styles.buttons,
           {
             display: dimension.width < 900 ? "none" : "flex",
-            gap: "50px",
           })
         }
       >
